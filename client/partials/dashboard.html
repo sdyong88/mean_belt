@@ -1,0 +1,22 @@
+<h1 ng-repeat= "person in persons">Hello from user dashboard! {{persons[0]}}</h1>
+<div>
+  <a href="#/questions">Add a Question</a>
+  <br>
+  <br>
+  <label>Search: <input type="text"></label>
+
+  <table>
+    <tr>
+      <td><h3>Question    </h3></td>
+      <td><h3>Answers     </h3></td>
+      <td><h3>Action      </h3></td>
+    </tr>
+
+    <tr ng-repeat= 'question in questions'>
+      <td>{{question.title}}</td>
+      <td><p>#</p></td>
+      <td><a href="#/question/{{question._id}}">Show</a>  |  <a href="#/answer/{{question._id}}">Answer</a></td>
+    </tr>
+
+  </table>
+</div>
