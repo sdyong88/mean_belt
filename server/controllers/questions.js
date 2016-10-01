@@ -25,7 +25,7 @@ function QuestionsController(){
 
   this.show = function(req,res){
     Question.find({})
-      .populate("_questions")
+      .populate("_answers")
       .exec(function(err, questions){
         if(err){
           console.log("error",err);
@@ -36,7 +36,6 @@ function QuestionsController(){
   };
 
   this.shows = function(req, res){
-    console.log('shows:',req.params.id);
     Question.find({_id: req.params.id}, function(err,data){
       if(err){
         console.log("error");

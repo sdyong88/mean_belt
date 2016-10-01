@@ -14,7 +14,7 @@
 
     <tr ng-repeat= 'question in questions'>
       <td>{{question.title}}</td>
-      <td><p>#</p></td>
+      <td><p>{{question.answers.length}}</p></td>
       <td><a href="#/question/{{question._id}}">Show</a>  |  <a href="#/answer/{{question._id}}">Answer</a></td>
     </tr>
 

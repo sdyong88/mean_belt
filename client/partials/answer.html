@@ -1,11 +1,11 @@
 
 <div>
-  <h2><a href="#/dashboard">Home</a>   |    <a href="#/question/{{question._id}}"> Go Back to Question</a> </h2>
+  <h2><a href="#/dashboard">Home</a>   |    <a href="#/question/{{question}}"> Go Back to Question</a> </h2>
 
   <form>
     <label>Your Answer: <input type="text"  ng-model="answer.comment"></label><br>
     <label>Supporting Details for your answer (optional): <input type="text"  ng-model="answer.description"></label><br>
     <button ng-click='createAnswer()'>Submit</button>
   </form>
-    <button>Cancel</button>
+    <button><a href="#/dashboard">Cancel</button></a>
 </div>

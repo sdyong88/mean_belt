@@ -1,6 +1,6 @@
-app.controller('answerController',['$scope','answerFactory','$location','userFactory','$routeParams', function($scope, answerFactory, $location, userFactory,$routeParams){
+app.controller('answerController',['$scope','answerFactory','$location','$routeParams', function($scope, answerFactory, $location,$routeParams){
 
-  console.log($routeParams.id);
+  $scope.question = $routeParams.id;
   $scope.createAnswer = function(){
     console.log($scope.answer);
     answerFactory.create($scope.answer, function(data){
